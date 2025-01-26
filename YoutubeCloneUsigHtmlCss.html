@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube.com Clone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="YouTubeCloneUsingstyle.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <img class="hamburger-menu"src="https://supersimple.dev/exercises/youtube/icons/hamburger-menu.svg">
+        <img class="youtube-logo"src="https://supersimple.dev/exercises/youtube/icons/youtube-logo.svg">
+
+      </div>
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="https://supersimple.dev/exercises/youtube/icons/search.svg">
+          <div class="tooltip">Search</div>
+        </button>
+        <!-- Put position absolute inside position relative -->
+        <button class="voice-search-button">
+          <img class="voice-search-icon" src="https://supersimple.dev/exercises/youtube/icons/voice-search-icon.svg">
+          <div class="tooltip">Search with your voice</div>
+        </button>
+      </div>
+      <div class="right-section">
+        <div class="upload-icon-container">
+          <img class="upload-icon" src="https://supersimple.dev/exercises/youtube/icons/upload.svg">
+       
+          <div class="tooltip">Create</div>
+        </div>
+        <img class="youtube-apps-icon"  src="https://supersimple.dev/exercises/youtube/icons/youtube-apps.svg">
+        <div class="notifications-icon-container">
+          <img class="notifications-icon" src="https://supersimple.dev/exercises/youtube/icons/notifications.svg">
+          <div class="notifications-count">3</div>
+        </div>
+        <img class="current-user-picture" src="data:image/jpeg;base64,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">
+      </div>
+    </header>
+
+    <nav class="sidebar">
+      <div class="sidebar-link">
+        <img src="https://supersimple.dev/exercises/youtube/icons/home.svg">
+        <div>Home</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="https://supersimple.dev/exercises/youtube/icons/explore.svg">
+        <div>Explore</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="https://supersimple.dev/exercises/youtube/icons/originals.svg">
+        <div>Subscriptions</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="https://supersimple.dev/exercises/youtube/icons/youtube-music.svg">
+        <div>Originals</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="https://supersimple.dev/exercises/youtube/icons/youtube-music.svg">
+        <div>YouTube Music</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="https://supersimple.dev/exercises/youtube/icons/library.svg">
+        <div>Library</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="data:image/png;base64,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">
+        <div>Shorts</div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="video-grid">
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnail" src="https://i.ytimg.com/vi/6Ck-HD-3qJQ/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLCC8s_6BRTA9iIv5IfFImGS_K3WVg" >
+    
+            <div class="video-time">14:20</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+               <img class="profile-picture" src="https://yt3.ggpht.com/7Awd14cf90g2cfYinan3QAxYsvhAv35PJP6_LSRsJmM7hUajhKJS1EHhaYYTdfIhjSbV-u8WMw=s68-c-k-c0x00ffffff-no-rj">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                ⭐Ask Us Anything⭐ Kim Jun Ho & Woo Brothers |The Return of Superman</p>
+              <p class="video-author">
+                KBS  &#10004
+              </p>
+              <p class="video-stats">
+                935K views  2 weeks ago
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnail" src="https://i.ytimg.com/vi/4sHlCovj-Ik/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLBch8Us95GfnabLx4la_RwuyFDaWg" >
+   
+            <div class="video-time">8:22</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.ggpht.com/ytc/AIdro_nBUWR_EdGJduY_Ve5WFSQ0kItsxkmLpWqIhzFZVOj_Rg8=s68-c-k-c0x00ffffff-no-rj">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                Impossible Things Stolen by Indian Thieves
+              </p>
+              <p class="video-author">
+                Slayy Point  &#10004
+              </p>
+              <p class="video-stats">
+                11M views  11 months ago
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnail" src="https://i.ytimg.com/vi/quEuH8pd3js/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLCJ4PF0Hbrp8oJNmuXjU2XpmJEVtg" >
+    
+            <div class="video-time">9:13</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.ggpht.com/Z2UPkpQ-qGDlcSk6S4YpSF6TW77DMqRyphswXm896r4RS-o9VXWlTz9wHikzluI-3LxT1FCsVQ=s176-c-k-c0x00ffffff-no-rj-mo">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                Story Time : a ghost started living with me
+              </p>
+              <p class="video-author">
+                The Rebel Kid &#10004
+              </p>
+              <p class="video-stats">
+                2.2M views  3 weeks ago
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnail" src="https://i.ytimg.com/vi/5dLkGw1JVYw/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLAsfHKgYcw-d7Z9gYGoWrSqEpAt0g" >
+    
+            <div class="video-time">22:09</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.ggpht.com/QFX3SOG0lNVO0jF86k2qKOmwSWSmK7z0T_Ycu3yPesrws9I07_3uhPKu0cQS7CqHeaYXQ9LG=s176-c-k-c0x00ffffff-no-rj-mo">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                Answering your Assumptions about us🫢🫨❤️✨|YR| </p>
+              <p class="video-author">
+                Yashasvi Rajpoot &#10004
+              </p>
+              <p class="video-stats">
+                388K views  4 weeks ago
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnail" src="https://i.ytimg.com/vi/IpFX2vq8HKw/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLAs_g54QXBpIzSzcLy4YP8MaX239A" >
+   
+            <div class="video-time">11:17</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.googleusercontent.com/lh4HI-z1K74bol4w_zbACLVQk_XlwuSxYabz-vGtXwE13g8spbvnFk-r_dP2TJZUoXVOvvX8wTw=s176-c-k-c0x00ffffff-no-rj-mo">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                yung kai - blue (Official Music Video)
+              </p>
+              <p class="video-author">
+                yung kai &#127925
+              </p>
+              <p class="video-stats">
+                25,721,057 views  4 weeks ago
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnail"  src="https://i.ytimg.com/vi/jQjh3VINx2Y/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLD-LrcTC3gZ9oc2rXRpS3-C46B_-w" >
+    
+            <div class="video-time">19:59</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.ggpht.com/7Awd14cf90g2cfYinan3QAxYsvhAv35PJP6_LSRsJmM7hUajhKJS1EHhaYYTdfIhjSbV-u8WMw=s68-c-k-c0x00ffffff-no-rj">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                🐻Hype Boy came to see the Thigh Boys🐻 l The Return of Superman KBS 241127 Broadcast
+              </p>
+              <p class="video-author">
+                KBS  &#10004
+              </p>
+              <p class="video-stats">
+                1.7M views  1 month ago
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="https://i.ytimg.com/vi/frf7qxiN2qU/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLB007ukg1L_tngIzK5OUVza1xUABQ" >
+   
+              <div class="video-time">19:59</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.googleusercontent.com/ytc/AIdro_mdPFTT7VuJHQkvzW9gjJxvSV3bBDpEVNw8dWOmHjTT5g=s176-c-k-c0x00ffffff-no-rj-mo">
+            </div>
+              <div class="video-info">
+                <p class="video-title">
+                    Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays  </p>
+                <p class="video-author">
+                    take U Forward  &#10004
+                </p>
+                <p class="video-stats">
+                    730K views  1 year ago
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail"  src="https://i.ytimg.com/vi/Zj9fS4ZmW_o/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLDcqPK1NjUsrpIWNRXUFhrZq4jm3A" >
+    
+              <div class="video-time">19:59</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.ggpht.com/_s3C7XpwVKVr_5gDrmYJh9AOkU3wFlY9FWyZBVGVP_v7B09P5O4bbEZaWGpiuyT78Dk-aElE=s176-c-k-c0x00ffffff-no-rj-mo">
+            </div>
+              <div class="video-info">
+                <p class="video-title">
+                    Eating 11kg of Steamed Oysters Like a Mountain! Oyster Mukbang</p>
+                <p class="video-author">
+                    tzuyang  &#10004
+                </p>
+                <p class="video-stats">
+                    1.6M views  Jan 11, 2025
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail"   src="https://i.ytimg.com/vi/WbRnTZfPeNc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBokbisRqe0aYVxTVMwUjSahTdoCQ" >
+    
+              <div class="video-time">19:59</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.ggpht.com/QFX3SOG0lNVO0jF86k2qKOmwSWSmK7z0T_Ycu3yPesrws9I07_3uhPKu0cQS7CqHeaYXQ9LG=s176-c-k-c0x00ffffff-no-rj-mo">
+            </div>
+              <div class="video-info">
+                <p class="video-title">
+                    Going to Surat❤️✨|YR|
+                </p>
+                <p class="video-author">
+                    Yashasvi Rajpoot &#10004
+                </p>
+                <p class="video-stats">
+                    388K views  1 day ago
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail"   src="https://i.ytimg.com/vi/YOWsK4S5zmE/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLDELzUvYPUyh5qYuOo4TD2Gfpb7sA" >
+  
+              <div class="video-time">19:59</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.ggpht.com/_s3C7XpwVKVr_5gDrmYJh9AOkU3wFlY9FWyZBVGVP_v7B09P5O4bbEZaWGpiuyT78Dk-aElE=s176-c-k-c0x00ffffff-no-rj-mo">
+          </div>
+              <div class="video-info">
+                <p class="video-title">
+                    Gangsters Running a Snack Bar?! Must-Try Tteokbokki, Ramyeon, and Fried Delights!</p>
+                <p class="video-author">
+                    tzuyang  &#10004
+                </p>
+                <p class="video-stats">
+                    2.5M views    1 month ago
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="https://i.ytimg.com/vi/gnyVkwpvAbM/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLByl5RffvPgsmf2kMgAkmOmbrhDMw" >
+  
+              <div class="video-time">45:59</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.ggpht.com/oaYlKvC-iWEOuk1SKOaxWJwIp-7KFBBAJt36m-CJsvhgkDsRurYN-yyHaGaDD7wLSppI7L_AE04=s176-c-k-c0x00ffffff-no-rj-mo">
+           </div>
+              <div class="video-info">
+                <p class="video-title">
+                    The Blossoming Love EP02 | Zhang Binbin / Sun Zhenni| YOUKU</p>
+                <p class="video-author">
+                    YOUKU  &#10004
+                </p>
+                <p class="video-stats">
+                    730K views  1 year ago
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail"  src="https://i.ytimg.com/vi/PuxNGqMMVho/hq720.jpg?sqp=-…BACGAY4AUAB&rs=AOn4CLCM1eWb7TyYTWLwutHQ-EFLDaisRw" >
+    
+              <div class="video-time">19:59</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="https://yt3.googleusercontent.com/ytc/AIdro_kaORa7od6IpKLpzT6Ufq4gGAWij48fviXo83PRa2gudik=s176-c-k-c0x00ffffff-no-rj-mo">
+          </div>
+              <div class="video-info">
+                <p class="video-title">
+                    Fried eggplant roll, Mixed noodles & apple rose pie. Easy & quick tortilla whopper</p>
+                <p class="video-author">
+                    planD
+                </p>
+                <p class="video-stats">
+                    3.4M views  1 year ago
+                </p>
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+  </body>
+</html>
