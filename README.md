@@ -1,4 +1,6 @@
-# Youtube.
+# Youtube Clone
+
+This project is a **YouTube login page clone** built using **HTML5** and **CSS3**. It replicates the UI layout and styling of the original YouTube login screen, focusing on pixel-perfect design and responsiveness across different devices.
 
 ---
 
