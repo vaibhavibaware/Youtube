@@ -5,7 +5,7 @@ Features:
 Navigation Bar:
 
 Logo placeholder (e.g., "YouTube").
-Search bar.
+Search bar. 
 Icons for notifications, profile, etc.
 Categories Bar:
 
