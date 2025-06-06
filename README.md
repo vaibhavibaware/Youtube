@@ -1,13 +1,3 @@
- # Youtube
-Here’s a quick overview of what the HTML and CSS code for the YouTube Front Page will include:
-
-Features:
-Navigation Bar:
-
-Logo placeholder (e.g., "YouTube").
-Search bar. 
-Icons for notifications, profile, etc.
-Categories Bar:
 
 Horizontal scrollable categories for "Trending," "Music," "Gaming," etc.
 Video Thumbnails:
